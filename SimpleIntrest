@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class SimpleInterest {
-    public static void Calculate(int principal, int rate, int time){
+    public static void Calculate(float principal, float rate, float time){
         float SimpleInterest = principal*rate*time/100;
         System.out.println("The simple interest of given anount is " + SimpleInterest);
         System.out.println("The final payable amount is "+ SimpleInterest+amount);
