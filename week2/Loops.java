@@ -1,6 +1,7 @@
 
 public class LoopPatterns 
-{void patternA(){
+{
+   public static void pattern1(){
    for(int i=0;i<4;i++)
     {
       for(int j=0;j<4;j++)
@@ -9,8 +10,8 @@ public class LoopPatterns
         }
         System.out.println();
     }  
-}
-   void patternB()
+   }
+   public static oid pattern2()
    {
       for(int i=0;i<4;i++)
         {
@@ -21,7 +22,7 @@ public class LoopPatterns
          System.out.println();
         }
    }
-   void patternC()
+   public static void pattern3()
    {
       for(int i=0;i<4;i++)
         {
@@ -32,7 +33,7 @@ public class LoopPatterns
         System.out.println();
         }
    }
-   void patternD()  
+   public static vvoid pattern4()  
    {
       for(int i=4;i>0;i--)
         {
@@ -43,7 +44,7 @@ public class LoopPatterns
         System.out.println();
         }
    }
-   void patternE()
+   public static void pattern5()
    {
         for(int i=0;i<4;i++)
         {
