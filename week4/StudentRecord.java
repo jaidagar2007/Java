@@ -1,67 +1,42 @@
-class Book {
-    private String title;
-    private String author;
-    private String bookCode;
-    private boolean loaned;
-
-    public Book(String title, String author, String bookCode) {
-        if (title == null || title.isBlank()) {
-           System.out.println("Book title can never be null");
-           return;
-        }
-
-        if (author == null || author.isBlank()) {
-            System.out.println("Author can never be null");
+public class StudentRecord {
+    private int marks;
+    private String name;
+    private String studentID;
+    public StudentRecord(String name,String studentId,int marks){
+        if(name==null||studentID==null){
+            System.out.println("Name or StudentID can never be null");
             return;
         }
-
-        if (bookCode == null || bookCode.isBlank()) {
-            System.out.println("BookCode can never be null");
+        if(marks<0||marks>100){
+            System.out.println("Invalid Marks");
             return;
         }
-
-        this.title = title;
-        this.author = author;
-        this.bookCode = bookCode;
-        this.loaned = false;
+        this.name = name;
+        this.studentID = studentId;
+        this.marks = marks;
     }
-    public boolean borrowBook() {
-        if (loaned) {
-            return false; 
-        }
-
-        loaned = true;
-        return true;
+    public int getMarks(){
+        return marks;
     }
-    public boolean returnBook() {
-        if (!loaned) {
-            return false; 
-        }
-
-        loaned = false;
-        return true;
+    public String getName(){
+        return name;
     }
-
-    public boolean isAvailable() {
-        return !loaned;
+    public String getStudentId(){
+        return studentID;
     }
-
-    public String getTitle() {
-        return title;
+    public void setMarks(int marks){
+        this.marks = marks;
     }
-    public String getAuthor() {
-        return author;
+    public void setName(String name){
+        this.name = name;
     }
-
-    public String getBookCode() {
-        return bookCode;
+    public void setStudentID(String studentID){
+        this.studentID = studentID;
     }
-    public String toString() {
-        return "Book{" +
-                "title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", bookCode='" + bookCode + '\'' +
-                ", available=" + isAvailable() +
-                '}';
+    public static void main(String[] args) {
+        StudentRecord s1 = new StudentRecord("Jai Dagar", "25csu093", 99);
+        s1.setMarks(50);
+        System.out.println(s1.getMarks());
+        
     }
 }
